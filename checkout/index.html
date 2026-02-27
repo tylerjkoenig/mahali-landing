@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get the Assessment — Mahali Pazuri</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,600;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet" />
+  <script async defer src="https://js.whop.com/static/checkout/loader.js"></script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:  #faf9f5;
+      --green:  #0d362b;
+      --black:  #000000;
+      --white:  #ffffff;
+      --muted:  #4a5e58;
+      --bord:   #ddd8ce;
+      --light:  #f0ece4;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--cream);
+      color: var(--black);
+      font-family: 'Newsreader', serif;
+      font-size: 17px;
+      line-height: 1.75;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    /* ── NAV ── */
+    nav {
+      padding: 12px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--cream);
+      border-bottom: 1px solid var(--bord);
+    }
+
+    /* ── CHECKOUT LAYOUT ── */
+    .checkout-wrap {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 40px 24px 60px;
+    }
+
+    .checkout-header {
+      text-align: center;
+      margin-bottom: 28px;
+    }
+
+    .eyebrow {
+      font-family: 'Newsreader', serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--green);
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .checkout-header h1 {
+      font-family: 'Alegreya', serif;
+      font-size: 26px;
+      font-weight: 700;
+      line-height: 1.2;
+      color: var(--black);
+      margin-bottom: 6px;
+    }
+
+    .checkout-header p {
+      font-size: 15px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .divider {
+      width: 40px;
+      height: 2px;
+      background: var(--green);
+      opacity: 0.4;
+      margin: 20px auto 28px;
+    }
+
+    /* ── WHOP EMBED ── */
+    .whop-embed-wrap {
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    [data-whop-checkout-plan-id] {
+      height: fit-content;
+      overflow: hidden;
+    }
+
+    /* ── BACK LINK ── */
+    .back-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      font-size: 13px;
+      color: var(--muted);
+      text-decoration: none;
+    }
+    .back-link:hover { color: var(--green); }
+
+    @media (max-width: 640px) {
+      .checkout-wrap { padding: 24px 16px 48px; }
+      .checkout-header h1 { font-size: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <a href="/"><img src="/logo.png" alt="Mahali Pazuri" style="height:36px; width:auto; display:block; opacity:0.4;"></a>
+  </nav>
+
+  <div class="checkout-wrap">
+    <div class="checkout-header">
+      <span class="eyebrow">Family Travel Intelligence</span>
+      <h1>Get the Assessment</h1>
+      <p>One-time · $27 · Instant access</p>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="whop-embed-wrap">
+      <div
+        data-whop-checkout-plan-id="plan_Aab434C46fiAk"
+        data-whop-checkout-return-url="https://assessment.mahalipazuri.com"
+        data-whop-checkout-theme="light"
+        data-whop-checkout-theme-accent-color="jade"
+      ></div>
+    </div>
+
+    <a href="/" class="back-link">← Back to overview</a>
+  </div>
+
+</body>
+</html>

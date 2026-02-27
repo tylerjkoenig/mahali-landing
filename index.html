@@ -197,6 +197,16 @@
       overflow: hidden;
     }
 
+    /* ── PAYMENT LOGOS ── */
+    .payment-logos {
+      display: flex;
+      gap: 6px;
+      align-items: center;
+      margin: 14px 0 6px;
+      flex-wrap: wrap;
+    }
+    .pay-icon { width: 50px; height: 31px; display: block; }
+
     /* ── HERO TESTIMONIAL ── */
     .hero-testimonial {
       margin-top: 16px;
@@ -210,8 +220,21 @@
       line-height: 1.6;
       color: #3a3a3a;
       font-style: italic;
-      margin: 0 0 4px;
+      margin: 0 0 8px;
       max-width: none;
+    }
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .testimonial-avatar {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 1.5px solid var(--sageb);
     }
     .hero-testimonial cite {
       font-size: 12px;
@@ -606,6 +629,10 @@
     <div class="container">
       <span class="eyebrow anim-1">Family Travel Intelligence Assessment</span>
       <h1 class="anim-2">Find out what your kids actually need from your <em>next family trip.</em></h1>
+      <p class="hero-sub anim-3">
+        Before you start booking, spend 5 minutes here. Based on your family's travel history and where your kids are developmentally, you'll get a precise picture of what your next destination needs to deliver — and which experiences will actually matter.
+      </p>
+
       <!-- VIDEO -->
       <div class="hero-video-wrap">
         <div id="vidalytics_embed_vuv4eq76nlxsijso" style="width: 100%; position:relative; padding-top: 56.25%;"></div>
@@ -622,10 +649,6 @@
         </script>
       </div>
 
-      <p class="hero-sub anim-3">
-        Before you start booking, spend 5 minutes here. Based on your family's travel history and where your kids are developmentally, you'll get a precise picture of what your next destination needs to deliver — and which experiences will actually matter.
-      </p>
-
       <div class="anim-4">
         <div class="price-badge">
           <span class="price-dollar">$</span>
@@ -635,13 +658,47 @@
       </div>
       <div class="anim-5">
         <a href="https://whop.com/mahali-pazuri/family-travel-assessment" class="btn">Get the Assessment →</a>
-        <p class="hero-meta">5 minutes · Personalized to your family · No email required to use</p>
+        <!-- PAYMENT LOGOS -->
+        <div class="payment-logos">
+          <!-- Apple Pay -->
+          <svg class="pay-icon" viewBox="0 0 50 31" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Apple Pay">
+            <rect width="50" height="31" rx="4" fill="#000"/>
+            <text x="25" y="20" text-anchor="middle" fill="white" font-family="-apple-system,'Helvetica Neue',sans-serif" font-size="10" font-weight="500"> Pay</text>
+          </svg>
+          <!-- Google Pay -->
+          <svg class="pay-icon" viewBox="0 0 50 31" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Google Pay">
+            <rect width="50" height="31" rx="4" fill="white" stroke="#e0e0e0" stroke-width="0.75"/>
+            <text x="13" y="20" text-anchor="middle" fill="#4285F4" font-family="Arial,sans-serif" font-size="13" font-weight="700">G</text>
+            <text x="33" y="20" text-anchor="middle" fill="#3c4043" font-family="Arial,sans-serif" font-size="11" font-weight="500">Pay</text>
+          </svg>
+          <!-- Visa -->
+          <svg class="pay-icon" viewBox="0 0 50 31" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Visa">
+            <rect width="50" height="31" rx="4" fill="#1A1F71"/>
+            <text x="25" y="21" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="15" font-weight="bold" font-style="italic">VISA</text>
+          </svg>
+          <!-- Mastercard -->
+          <svg class="pay-icon" viewBox="0 0 50 31" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mastercard">
+            <rect width="50" height="31" rx="4" fill="white" stroke="#e0e0e0" stroke-width="0.75"/>
+            <circle cx="20" cy="15.5" r="9" fill="#EB001B"/>
+            <circle cx="30" cy="15.5" r="9" fill="#F79E1B"/>
+            <path d="M25 8.1a9 9 0 0 1 0 14.8 9 9 0 0 1 0-14.8z" fill="#FF5F00"/>
+          </svg>
+          <!-- American Express -->
+          <svg class="pay-icon" viewBox="0 0 50 31" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="American Express">
+            <rect width="50" height="31" rx="4" fill="#2671B5"/>
+            <text x="25" y="21" text-anchor="middle" fill="white" font-family="Arial,sans-serif" font-size="9.5" font-weight="bold" letter-spacing="0.5">AMEX</text>
+          </svg>
+        </div>
+        <p class="hero-meta">5 minutes · Personalized to your family</p>
       </div>
 
       <!-- TESTIMONIAL -->
       <div class="hero-testimonial">
         <p>"Didn't realize we'd been traveling in a bubble. This changed the way we approached this year's trip planning."</p>
-        <cite>— Greg R.</cite>
+        <div class="testimonial-author">
+          <img class="testimonial-avatar" src="data:image/jpeg;base64,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" alt="Greg R.">
+          <cite>— Greg R.</cite>
+        </div>
       </div>
     </div>
   </section>

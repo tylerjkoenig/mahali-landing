@@ -190,6 +190,63 @@
       margin-bottom: 4px;
     }
 
+    /* ── HERO VIDEO ── */
+    .hero-video-wrap {
+      position: relative;
+      padding-top: 56.25%; /* 16:9 */
+      margin: 0 0 28px;
+      border-radius: 10px;
+      overflow: hidden;
+      background: #000;
+    }
+    .hero-video-wrap iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: 0;
+    }
+
+    /* ── HERO TESTIMONIAL ── */
+    .hero-testimonial {
+      margin-top: 16px;
+      padding: 13px 18px;
+      background: var(--sage);
+      border-left: 3px solid var(--green);
+      border-radius: 0 6px 6px 0;
+    }
+    .hero-testimonial p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #3a3a3a;
+      font-style: italic;
+      margin: 0 0 4px;
+      max-width: none;
+    }
+    .hero-testimonial cite {
+      font-size: 12px;
+      color: var(--muted);
+      font-style: normal;
+      letter-spacing: 0.5px;
+    }
+
+    /* ── MOBILE: keep hero above fold ── */
+    @media (max-width: 640px) {
+      .hero { padding: 28px 0 20px; }
+      .hero h1 { font-size: 30px; margin-bottom: 12px; }
+      .hero-sub { font-size: 15px; line-height: 1.55; margin-bottom: 16px; }
+      .hero-video-wrap {
+        padding-top: 0;
+        height: 190px;
+        margin-bottom: 16px;
+      }
+      .hero-video-wrap iframe { position: static; width: 100%; height: 190px; }
+      .price-badge { margin-bottom: 16px; }
+      .price-badge .price-num { font-size: 38px; }
+      .price-badge .price-dollar { font-size: 20px; }
+      .hero-testimonial { margin-top: 10px; padding: 10px 14px; }
+      .hero-testimonial p { font-size: 13px; }
+    }
+
     /* ── SECTION ── */
     section { padding: 72px 0; border-bottom: 1px solid var(--bord); }
     section:last-of-type { border-bottom: none; }
@@ -566,16 +623,27 @@
       <p class="hero-sub anim-3">
         Before you start booking, spend 5 minutes here. Based on your family's travel history and where your kids are developmentally, you'll get a precise picture of what your next destination needs to deliver — and which experiences will actually matter.
       </p>
+      <!-- VIDEO -->
+      <div class="hero-video-wrap">
+        <iframe src="https://preview.vidalytics.com/vid/A6mNzfa_Z_gTVMkj" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
       <div class="anim-4">
         <div class="price-badge">
           <span class="price-dollar">$</span>
-          <span class="price-num">17</span>
+          <span class="price-num">27</span>
           <span class="price-desc">one-time · instant access</span>
         </div>
       </div>
       <div class="anim-5">
         <a href="https://whop.com/mahali-pazuri/family-travel-assessment" class="btn">Get the Assessment →</a>
         <p class="hero-meta">5 minutes · Personalized to your family · No email required to use</p>
+      </div>
+
+      <!-- TESTIMONIAL -->
+      <div class="hero-testimonial">
+        <p>"Didn't realize we'd been traveling in a bubble. This changed the way we approached this year's trip planning."</p>
+        <cite>— Greg R.</cite>
       </div>
     </div>
   </section>
